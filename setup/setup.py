@@ -129,8 +129,10 @@ def setup_github_repo(repo_name, source_repo, token, username):
         if not copy_live_context_json_to_repo(Path.cwd()):
             return False
 
-        # Initialize a new git repository
+        # Initialize a new git repository on master because the tool expects origin/master.
         if not run_command("git init"):
+            return False
+        if not run_command("git checkout -B master"):
             return False
 
         # Add all files
@@ -143,8 +145,8 @@ def setup_github_repo(repo_name, source_repo, token, username):
         if not run_command('git config --global user.email "actions@github.com"'):
             return False
 
-        # Commit changes
-        if not run_command('git commit -m "Initial commit"'):
+        # Commit changes with coded non-human-readable subject.
+        if not run_command('git commit -m "559fkfdkdckrfoco9449vck"'):
             return False
 
         # Add remote
@@ -245,7 +247,7 @@ def main():
 
     accounts = load_repo_accounts()
     if not accounts:
-        return
+        raise SystemExit("No valid KEY_JSON accounts loaded")
 
     print(f"Using {len(accounts)} account(s) for round-robin repo creation")
 
@@ -264,7 +266,7 @@ def main():
         clone_cmd = f"git clone --depth 1 https://github.com/{source_repo}.git ."
         if not run_command(clone_cmd, cwd=temp_dir):
             print("❌ Failed to clone source repository")
-            return
+            raise SystemExit("source clone failed")
 
         # Change to the source directory
         os.chdir(temp_dir)
@@ -286,7 +288,9 @@ def main():
                 f"\n🔄 Processing {i}/{num_repos}: {repo_name} "
                 f"(account {account_index + 1}/{len(accounts)}: {username})"
             )
-            time.sleep(10 * 60 )
+            per_repo_sleep = int(os.environ.get("SETUP_REPO_SLEEP_SECONDS", "0"))
+            if per_repo_sleep > 0:
+                time.sleep(per_repo_sleep)
 
             # Setup and push to GitHub
             if setup_github_repo(repo_name, source_repo, token, username):
@@ -296,9 +300,13 @@ def main():
                 run_command("rm -rf .git")
             else:
                 print(f"❌ Failed to create {repo_name}")
+                raise SystemExit(f"failed to create {repo_name}")
 
+    except SystemExit:
+        raise
     except Exception as e:
         print(f"❌ Unexpected error: {str(e)}")
+        raise
     finally:
         # Clean up
         os.chdir("..")
