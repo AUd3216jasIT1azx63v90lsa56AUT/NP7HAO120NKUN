@@ -1,0 +1,6 @@
+[
+  "'File Name: smart-contracts-poc/contracts/PriceProviderFactory.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions, or violation of protocol invariants with Medium+ impact.'",
+  "'File Name: smart-contracts-poc/contracts/PriceProvider.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions, or violation of protocol invariants with Medium+ impact.'",
+  "'File Name: smart-contracts-poc/contracts/ProtectedPriceProviderL2.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions, or violation of protocol invariants with Medium+ impact.'",
+  "'File Name: smart-contracts-poc/contracts/ProtectedPriceProvider.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions, or violation of protocol invariants with Medium+ impact.'"
+]

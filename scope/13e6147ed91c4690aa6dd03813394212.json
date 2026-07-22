@@ -1,0 +1,6 @@
+[
+  "'File Name: smart-contracts-poc/contracts/PriceProviderFactory.sol -> Scope: High: direct loss/theft/drain/freezing of funds, insolvency, unauthorized value extraction, or severe oracle/pool/accounting failure with sufficient likelihood under Sherlock rules.'",
+  "'File Name: smart-contracts-poc/contracts/PriceProvider.sol -> Scope: High: direct loss/theft/drain/freezing of funds, insolvency, unauthorized value extraction, or severe oracle/pool/accounting failure with sufficient likelihood under Sherlock rules.'",
+  "'File Name: smart-contracts-poc/contracts/ProtectedPriceProviderL2.sol -> Scope: High: direct loss/theft/drain/freezing of funds, insolvency, unauthorized value extraction, or severe oracle/pool/accounting failure with sufficient likelihood under Sherlock rules.'",
+  "'File Name: smart-contracts-poc/contracts/ProtectedPriceProvider.sol -> Scope: High: direct loss/theft/drain/freezing of funds, insolvency, unauthorized value extraction, or severe oracle/pool/accounting failure with sufficient likelihood under Sherlock rules.'"
+]

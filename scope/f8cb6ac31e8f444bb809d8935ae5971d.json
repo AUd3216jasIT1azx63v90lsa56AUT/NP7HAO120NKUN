@@ -1,0 +1,6 @@
+[
+  "'File Name: smart-contracts-poc/contracts/PriceProviderFactory.sol -> Scope: Scope-needs-review: severity/rules provenance remains provisional until Sherlock guide revision binding is resolved.'",
+  "'File Name: smart-contracts-poc/contracts/PriceProvider.sol -> Scope: Scope-needs-review: severity/rules provenance remains provisional until Sherlock guide revision binding is resolved.'",
+  "'File Name: smart-contracts-poc/contracts/ProtectedPriceProviderL2.sol -> Scope: Scope-needs-review: severity/rules provenance remains provisional until Sherlock guide revision binding is resolved.'",
+  "'File Name: smart-contracts-poc/contracts/ProtectedPriceProvider.sol -> Scope: Scope-needs-review: severity/rules provenance remains provisional until Sherlock guide revision binding is resolved.'"
+]
