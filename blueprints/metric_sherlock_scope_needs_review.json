@@ -3,5 +3,7 @@
   "source_repo": "incjanta/metric",
   "wrapper_head": "841950e39e2cfbaf4f9ae5d615f742e35817e4c5",
   "scope_mode": "scope-needs-review",
-  "direct_target_count": 79
+  "direct_target_count": 79,
+  "max_repo": 10,
+  "setup_repo_count": "10 generated repos required by Null correction"
 }

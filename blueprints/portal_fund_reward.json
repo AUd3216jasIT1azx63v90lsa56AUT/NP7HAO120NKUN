@@ -1,5 +1,5 @@
 {
-  "max_repo": 5,
+  "max_repo": 10,
   "source_repo": "incjanta/metric",
   "repo_name": "metric",
   "project_name": "Metric",

@@ -95,3 +95,5 @@ Contest: Sherlock Metric Contest — 150,000 USDC
 - `smart-contracts-poc/contracts/PriceProvider.sol`
 - `smart-contracts-poc/contracts/ProtectedPriceProviderL2.sol`
 - `smart-contracts-poc/contracts/ProtectedPriceProvider.sol`
+
+Setup repo count: `10`
