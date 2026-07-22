@@ -1,0 +1,127 @@
+[
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/ISelfPermit.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_01e0e9fc-300b-482b-b514-565f444d82d9?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IWETH9.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_8ff996e6-e879-4eca-ab10-b8eac675ff73?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapInputs.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_ab649ae9-8cd9-48bc-a475-363f6af5ae5a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapPath.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_48d46595-a134-4ba1-808e-db5823877e42?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapQuoteDecode.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_124c101c-4fd3-4e3e-8be1-8d2b239a2752?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/MetricOmmSwapResults.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_18d95049-7fa6-43bb-a384-5a5f69fd91f3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/libraries/TransientCallbackPool.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_fc2d104f-f272-4fff-a7fd-0690e169957f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/MetricOmmPoolLiquidityAdder.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_b7fa37f1-1159-464d-8d37-c82d29ded064?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/MetricOmmSimpleRouter.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_df84b96d-5c7d-46e7-b00e-2f40cbfe2c4b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/AnchoredPriceProvider.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_a924fba2-21c5-4cc4-9920-9eb726bb1790?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/AnchoredProviderFactory.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_456f602a-6b56-4500-8d0a-ceb0e0b3329d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/IAnchoredProviderFactory.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_de77c97f-7419-45d2-b0e0-60b7fee66efc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/IAnchorSource.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_a84bfc6b-6368-42db-b8d3-224f72aa7721?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/interfaces/ICompressedOracleV1.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_17139f1b-9cf9-497a-9db2-c595d449d1dd?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/compressed/CompressedOracle.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_c2c18e89-ad76-4b55-ba0f-fe7e94494de6?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/compressed/OracleBase.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_d0e5c3c4-a1e0-41be-aa74-e7f62b0d224a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/ChainlinkOracle.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_72f57654-75bf-4ac2-bc44-6903dd79d90b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/docs/en/abuse-protection-integration.md -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_7c96929a-ae8d-4ad7-987a-af4b272b91c7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/docs/ru/abuse-protection-integration.md -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_8150d24e-2a31-4e57-a12c-b1a4cdbd7083?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/OracleBase.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_31d95384-ac97-4f12-a2de-50bed6f0feca?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/providers/PythOracle.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_7584f5ad-1024-4128-9752-65cb7edfb98a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/Codebook256.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_16f149cd-242b-48d5-a8cd-117355bb1b06?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/LazerConsumer.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_2fc6eab1-277c-43c7-aae3-1a867e2a400f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/TimeMs.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_93691cc7-7781-4068-be08-105a523e732a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: smart-contracts-poc/contracts/oracles/utils/U64x32.sol -> Scope: Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_34ac736f-486a-4605-b7aa-9bd4e162543b?mode=deep",
+    "questions_generated": false
+  }
+]
