@@ -1,0 +1,6 @@
+[
+  "'File Name: smart-contracts-poc/contracts/PriceProviderFactory.sol -> Scope: Duplicate-risk-needs-review: prior-art root-cause register remains provisional until semantic cluster crosswalk is completed.'",
+  "'File Name: smart-contracts-poc/contracts/PriceProvider.sol -> Scope: Duplicate-risk-needs-review: prior-art root-cause register remains provisional until semantic cluster crosswalk is completed.'",
+  "'File Name: smart-contracts-poc/contracts/ProtectedPriceProviderL2.sol -> Scope: Duplicate-risk-needs-review: prior-art root-cause register remains provisional until semantic cluster crosswalk is completed.'",
+  "'File Name: smart-contracts-poc/contracts/ProtectedPriceProvider.sol -> Scope: Duplicate-risk-needs-review: prior-art root-cause register remains provisional until semantic cluster crosswalk is completed.'"
+]
