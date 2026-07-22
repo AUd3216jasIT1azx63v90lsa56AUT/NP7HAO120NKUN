@@ -90,7 +90,7 @@
     "High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.",
     "Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium."
   ],
-  "live_context_hint": "Metric Sherlock contest in scope-needs-review mode: preserve Moon REVISE blockers; pin wrapper HEAD, component commits, 79 direct targets, known issues/prior art, and Sherlock H/M validity rules.",
+  "live_context_hint": "Metric Sherlock contest source-page-verified: use filter=scope for exact files and filter=questions for trusted roles, token assumptions, oracle assumptions, invariants, design choices, severity definitions, and judging rules revision 8171fa8.",
   "context_interfaces": [
     "README.md",
     "protocol-readme.md",
@@ -125,8 +125,11 @@
     "Do not promote candidates requiring trusted actors to behave maliciously within documented authority unless proving a real unprivileged bypass or cap/timelock bypass.",
     "Treat USDC/USDT token-specific nonstandard behavior as scope-needs-review unless Sherlock/Judge confirms explicitly named token exception.",
     "Every candidate must carry duplicate-risk-needs-review until prior-art semantic cluster crosswalk is resolved.",
-    "Every severity argument must carry severity-needs-review until Sherlock guide revision binding is resolved.",
-    "Every PoC/build result must carry poc-env-needs-review if affected by unresolved dependency reproducibility."
+    "Every PoC/build result must carry poc-env-needs-review if affected by unresolved dependency reproducibility.",
+    "Sherlock contest Questions page is now bound to judging rules revision 8171fa8; still carry duplicate-risk-needs-review and poc-env-needs-review until their separate Moon blockers clear.",
+    "Reject findings relying only on malicious Factory Owner, Oracle ADMIN_ROLE, trusted integrated protocol governance, or unbounded Pool Admin behavior unless proving the specific cap/timelock bypass allowed by contest questions.",
+    "Reject non-standard ERC20 pool-created issues; USDC and USDT are explicitly in scope.",
+    "Do not claim off-chain oracle update misbehavior/staleness as a bug unless the in-scope code violates its stated stale/deviation/sequencer/band guards."
   ],
   "manual_deepwiki_verification_required": true,
   "manual_deepwiki_verification_gate": "Open all generated DeepWiki links in Brave and wait for Null verification before continuing post-setup workflows.",
@@ -135,5 +138,50 @@
     "severity-needs-review",
     "duplicate-risk-needs-review",
     "poc-env-needs-review"
-  ]
+  ],
+  "direct_source_of_truth": {
+    "scope_url": "https://audits.sherlock.xyz/contests/1279?filter=scope",
+    "questions_url": "https://audits.sherlock.xyz/contests/1279?filter=questions",
+    "verified_at": "2026-07-22",
+    "scope_count": 79,
+    "judging_rules_revision": "8171fa8",
+    "status": "source-page-verified"
+  },
+  "contest_questions_facts": {
+    "chains": [
+      "Ethereum",
+      "Base",
+      "HyperEVM"
+    ],
+    "tokens": "Standard ERC-20 only. USDC and USDT in scope. Non-standard ERC20 pool-created issues out of scope.",
+    "trusted_roles": [
+      "Factory Owner trusted: fee defaults/caps, poolDeployer once, protocol pause, treasury sweeps.",
+      "Pool Admin semi-trusted and bounded: valid only if caps/timelocks bypassed and Medium+.",
+      "Oracle ADMIN_ROLE trusted.",
+      "PriceProvider/AnchoredProvider factory trusted but provider params bounded."
+    ],
+    "oracle_assumption": "Off-chain oracle price updates are considered correct and not stale; compressed oracle updates considered correct/not stale unless code guard issue.",
+    "invariants": [
+      "Solvency: balances cover LP claims + owed fees; remove liquidity works while paused.",
+      "Swap conservation: exact settlement / IncorrectDelta otherwise; no value creation/leak.",
+      "Quote sanity: bid > 0 and bid < ask.",
+      "Anchored band: quote including source mode stays within mid \u00b1 (u + floor).",
+      "No trade on bad oracle: stale price, Chainlink deviation, L2 sequencer down revert."
+    ],
+    "design_choices": [
+      "Pure oracle-anchored pricing; no internal price discovery, no DEX cross-check except Chainlink deviation.",
+      "Rounding always favors pool; if not and Medium+ impact, valid.",
+      "Anchored band clipping is safety boundary; incorrect band math with Medium+ impact can be valid."
+    ],
+    "severity_defs": {
+      "critical": "Direct loss without external limitations, exploitable any moment, >20% and >100 USD; excludes yield/rewards.",
+      "high": "Direct loss without extensive external limitations >1% and >10 USD, or to-be-claimed yield/rewards >20% and >100 USD.",
+      "medium": "Loss under conditions/constrained >0.01% and >10 USD, yield/rewards >1% and >10 USD, or core functionality break causing qualifying loss."
+    },
+    "judging_rules_revision": "8171fa8",
+    "source_urls": [
+      "https://audits.sherlock.xyz/contests/1279?filter=scope",
+      "https://audits.sherlock.xyz/contests/1279?filter=questions"
+    ]
+  }
 }
