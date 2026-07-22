@@ -12,9 +12,14 @@ def generate_scope_files():
     Each file will be named with a UUID and contain 25 questions.
     """
     # Get the scope directory and remove stale chunks from prior projects/runs.
+    # Scope generation is a stage boundary: both scope/ and scope_questions/
+    # must be cleared so qgen cannot mix old question outputs with a new
+    # source-of-truth scope run.
     scope_directory = os.environ.get('SCOPE_DIR', 'scope')
-    if os.path.exists(scope_directory):
-        shutil.rmtree(scope_directory)
+    scope_questions_directory = os.environ.get('SCOPE_QUESTIONS_DIR', 'scope_questions')
+    for directory in [scope_directory, scope_questions_directory, 'scope_pending', 'scope_questions_pending']:
+        if os.path.exists(directory):
+            shutil.rmtree(directory)
     os.makedirs(scope_directory, exist_ok=True)
 
     try:
