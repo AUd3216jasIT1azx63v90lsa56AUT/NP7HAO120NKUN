@@ -21,10 +21,12 @@ class BlueprintPromptTests(unittest.TestCase):
         self.assertEqual(blueprint["repo_name"], "metric")
         self.assertEqual(len(blueprint["scope_files"]), 79)
         self.assertTrue(any("metric-core/contracts" in scope for scope in blueprint["scope_files"]))
-        self.assertGreaterEqual(len(blueprint["target_scopes"]), 4)
-        self.assertTrue(any(scope.startswith("High:") for scope in blueprint["target_scopes"]))
-        self.assertTrue(any(scope.startswith("Medium:") for scope in blueprint["target_scopes"]))
-        self.assertTrue(any("Scope-needs-review" in scope for scope in blueprint["target_scopes"]))
+        self.assertEqual(len(blueprint["target_scopes"]), 2)
+        self.assertTrue(all(scope.startswith(("High:", "Medium:")) for scope in blueprint["target_scopes"]))
+        self.assertFalse(any("needs-review" in scope.lower() for scope in blueprint["target_scopes"]))
+        self.assertIn("scope-needs-review", blueprint["audit_gates"])
+        self.assertIn("duplicate-risk-needs-review", blueprint["audit_gates"])
+        self.assertIn("poc-env-needs-review", blueprint["audit_gates"])
         self.assertTrue(any("duplicate-risk-needs-review" in item for item in blueprint["known_rejection_memory"]))
 
     def test_audit_prompt_uses_triage_verdicts_not_final_validation(self):

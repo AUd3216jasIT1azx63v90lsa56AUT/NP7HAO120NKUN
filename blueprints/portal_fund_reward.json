@@ -87,11 +87,8 @@
     "smart-contracts-poc/contracts/ProtectedPriceProvider.sol"
   ],
   "target_scopes": [
-    "High: direct loss/theft/drain/freezing of funds, insolvency, unauthorized value extraction, or severe oracle/pool/accounting failure with sufficient likelihood under Sherlock rules.",
-    "Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions, or violation of protocol invariants with Medium+ impact.",
-    "Scope-needs-review: severity/rules provenance remains provisional until Sherlock guide revision binding is resolved.",
-    "Duplicate-risk-needs-review: prior-art root-cause register remains provisional until semantic cluster crosswalk is completed.",
-    "PoC-env-needs-review: build/proof prerequisites remain provisional until clean reproducibility is repaired."
+    "High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.",
+    "Medium: conditional but realistic fund loss, material pricing/accounting error, persistent DoS of core pool functions with accepted impact, or material invariant violation accepted as Sherlock Medium."
   ],
   "live_context_hint": "Metric Sherlock contest in scope-needs-review mode: preserve Moon REVISE blockers; pin wrapper HEAD, component commits, 79 direct targets, known issues/prior art, and Sherlock H/M validity rules.",
   "context_interfaces": [
@@ -132,5 +129,11 @@
     "Every PoC/build result must carry poc-env-needs-review if affected by unresolved dependency reproducibility."
   ],
   "manual_deepwiki_verification_required": true,
-  "manual_deepwiki_verification_gate": "Open all generated DeepWiki links in Brave and wait for Null verification before continuing post-setup workflows."
+  "manual_deepwiki_verification_gate": "Open all generated DeepWiki links in Brave and wait for Null verification before continuing post-setup workflows.",
+  "audit_gates": [
+    "scope-needs-review",
+    "severity-needs-review",
+    "duplicate-risk-needs-review",
+    "poc-env-needs-review"
+  ]
 }

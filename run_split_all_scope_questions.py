@@ -25,6 +25,9 @@ def generate_scope_files():
         bad_files = [f for f in scope_files if not f.startswith(allowed_prefixes)]
         if bad_files:
             raise RuntimeError(f"Non-Metric scope files detected: {bad_files[:10]}")
+        bad_scopes = [s for s in target_scopes if not (s.startswith("High:") or s.startswith("Medium:"))]
+        if bad_scopes:
+            raise RuntimeError(f"Non-impact target scopes detected; gates must not become scope questions: {bad_scopes}")
 
         chunk_size = 25
         limit = smoke_limit()
