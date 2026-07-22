@@ -1,0 +1,127 @@
+[
+  {
+    "question": "'File Name: metric-core/contracts/types/FactoryStorage.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_c6bf9065-b2d8-4edc-8957-6a5cb0dde136?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/PoolExtensionsConfig.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_cafa9a80-c87b-4b42-ab04-a728047a6191?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/PoolOperation.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_76a17723-1e27-45b8-969a-13cc616131f7?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/PoolStorage.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_c630120b-c57d-44be-b696-39332747c459?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/types/Slot0.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_7ed0ee55-75cd-44af-aaca-2761396a598a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-core/contracts/utils/MetricReentrancyGuardTransient.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_cb2bf739-d5e9-4ba0-a85a-c6a5fb268b16?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/base/MetricOmmSwapRouterBase.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_93d08436-f160-4401-8002-626cdedbaea3?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/base/PeripheryPayments.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_a5c8d02c-b863-459d-aba0-8a2cdc35497b?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/base/SelfPermit.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_e50bbc2e-9a96-4064-af79-ed91f7575493?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/common/MetricOmmPoolStateView.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_1674b067-f143-40e8-81b8-2c55ccdb4a95?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/base/BaseMetricExtension.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_2390eaf1-bcb3-4ab3-ac21-6b7b8f154f49?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/DepositAllowlistExtension.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_3b5b580c-e18d-4259-bf76-9d2c72afb692?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/OracleValueStopLossExtension.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_e746b25f-24b6-48e4-a575-712f370543fc?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/PriceVelocityGuardExtension.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_49a927a8-f4c6-45fe-a590-0bb5522be87f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/extensions/SwapAllowlistExtension.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_3a9746b7-2e03-4ded-b952-74054410bc23?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/IDepositAllowlistExtension.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_e19d37c2-c5a1-4832-bf8e-91860855a06f?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/IOracleValueStopLossExtension.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_03428caf-b4db-4a1f-96e1-07a4babe1101?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/IPriceVelocityGuardExtension.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_4f8d6386-ec5c-4a1a-8941-a1fe1339fe30?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/extensions/ISwapAllowlistExtension.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_bf29b935-a685-4064-a0f3-e00491a54a5d?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/external/IERC20PermitAllowed.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_cf1d1d7e-a31b-4b55-95a4-57ce94574365?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMetricOmmPoolLiquidityAdder.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_e92d65c9-8dcf-4463-a474-1603d35b2917?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMetricOmmSimpleRouter.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_9e3c1934-83b4-4def-9aa4-8a381f5c637a?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMetricOmmSwapQuoter.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_98ac1606-e4e5-4784-9e01-93a965eb8f49?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IMulticall.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_41a43d11-bc09-492a-8f0a-baa8c772cf12?mode=deep",
+    "questions_generated": false
+  },
+  {
+    "question": "'File Name: metric-periphery/contracts/interfaces/IPeripheryPayments.sol -> Scope: High: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, protocol insolvency, unauthorized value extraction, or accepted Sherlock High impact with realistic likelihood.'",
+    "url": "https://deepwiki.com/search/-generate-valid-sherlock-high_451997ec-45b9-4201-95ee-56324f1aa3bb?mode=deep",
+    "questions_generated": false
+  }
+]
