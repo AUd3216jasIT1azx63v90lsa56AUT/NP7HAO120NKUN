@@ -83,7 +83,7 @@ Use live_context.json values if available: {BLUEPRINT["live_context_hint"]}.
 Context-only interface files:
 {interfaces}
 
-Use interface files only to understand ABI, selectors, structs, events, return values, and cross-contract expectations. Do not treat them as vulnerability target scope files. Only prove bugs through deployed concrete contracts that hold, move, mint, burn, account for, or distribute funds/rewards.
+Use interface files only to understand ABI, selectors, structs, events, return values, and cross-contract expectations. Do not treat them as vulnerability target scope files. Only prove bugs through deployed concrete contracts that hold, move, mint, burn, account for, or distribute funds or protocol value.
 
 Core invariants:
 {invariants}
@@ -117,9 +117,6 @@ def _live_context_snapshot(max_chars: int = 30000) -> str:
         live_context_path = project_root / live_context_path
 
     candidate_paths = [live_context_path]
-    portal_context_path = project_root.parent / "Portal" / "live_context.json"
-    if portal_context_path not in candidate_paths:
-        candidate_paths.append(portal_context_path)
 
     sections = []
     missing_paths = []
@@ -151,7 +148,7 @@ For non-REJECT output, list the exact live commands needed and mark missing prec
 """
 
     return f"""## Live Context Snapshot
-Use these live-context sources together. The machine setup context is the canonical DeepWiki seed; the Portal repo context is the freshest target snapshot when present. Reject stale context if target address, implementation, source files, chain, or paid-impact focus do not match the active blueprint.
+Use these live-context sources together. The machine setup context is the canonical DeepWiki seed for Metric. Reject stale context if target repository, source files, commits, chain, or Sherlock impact focus do not match the active Metric blueprint.
 
 {chr(10).join(sections)}
 """
@@ -162,7 +159,7 @@ def question_generator(target_file: str) -> str:
     Generate DeepWiki-compatible audit/fuzzing questions for one target.
 
     target_file format:
-    "'File Name: src/Portal.sol -> Scope: Critical Fund extraction or protocol value drain'"
+    "'File Name: metric-core/contracts/MetricOmmPool.sol -> Scope: High direct loss or severe pool/accounting failure'"
     """
 
     prompt = f"""
@@ -186,7 +183,7 @@ Rules:
 * Use exact Solidity symbols when possible.
 * Attacker is unprivileged: {BLUEPRINT["attacker_profile"]}.
 * Do not rely on admin compromise, malicious governance, leaked keys, impossible oracle values, pure external oracle failure, user mistakes, or unsupported third-party behavior.
-* Reject DoS/freeze/liveness/griefing questions unless the same path gives the attacker direct fund or reward extraction.
+* Reject DoS/freeze/liveness/griefing questions unless the same path gives the attacker direct fund loss, unauthorized value extraction, or severe pool/oracle/accounting failure.
 * Generate 35 to 60 high-signal questions.
 * At least 70% must be multi-step flow, invariant, fuzz, accounting, state-transition, or cross-module questions.
 * Every question must be testable later by local PoC, unit test, fuzz test, invariant test, or differential test.
@@ -236,7 +233,7 @@ def audit_format(security_question: str) -> str:
 - Ignore admin-only, governance-only, leaked-key, docs, style, gas-only, and best-practice issues.
 - Privileged functions matter only if they create a later user-triggered exploit path.
 - Do not rely on impossible oracle values, pure oracle failure, malicious token owner action, user mistake, or unsupported external dependency behavior.
-- Reject DoS, griefing, liveness, temporary freeze, liquidation blockage, and generic severity claims unless the same reachable path lets the attacker extract funds/rewards or increase attacker-controlled value.
+- Reject DoS, griefing, liveness, temporary freeze, liquidation blockage, and generic severity claims unless the same reachable path lets the attacker extract funds or protocol value or increase attacker-controlled value.
 - Prefer REJECT over speculative reports.
 
 ## Required Source-Level Checks
@@ -254,7 +251,7 @@ Before output, internally answer:
 - Can a normal external user trigger this?
 - Does the code actually behave as claimed?
 - Is the impact caused by this protocol, not by an external dependency alone?
-- Is the fund/reward extraction concrete, not hypothetical?
+- Is the Metric Sherlock impact concrete, not hypothetical?
 - Is this expected protocol behavior or public market competition?
 - Is this stale input/retry behavior without permanent fund/reward loss?
 - Is this already documented or previously reported?
@@ -331,8 +328,8 @@ def validation_format(report: str) -> str:
 - Reject admin-only, owner-only, trusted-operator, leaked-key, best-practice, docs/style, gas-only, and purely theoretical issues.
 - Reject if the exploit requires unrealistic assumptions, victim mistakes, missing external context, or unsupported protocol behavior.
 - A valid candidate must be triggerable by an unprivileged user, unless the claim proves privilege escalation from a user path.
-- The final impact must match fund extraction, protocol value drain, reward extraction, or unfair reward access, not just a generic code bug.
-- Reject DoS, freeze, liveness, griefing, liquidation blockage, or accounting-desync-only claims unless they directly let the attacker extract funds/rewards.
+- The final impact must match Sherlock High/Medium Metric impacts: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, conditional realistic loss, or persistent core-function DoS with accepted impact, not just a generic code bug.
+- Reject DoS, freeze, liveness, griefing, liquidation blockage, or accounting-desync-only claims unless they directly let the attacker extract funds or protocol value.
 - Prefer REJECT over speculative candidates.
 
 ## Required Validation Checks
@@ -415,7 +412,7 @@ def scan_format(report: str) -> str:
 - Do not ask for repository contents.
 
 ## Objective
-Find whether the same vulnerability class can occur in in-scope code as fund extraction, protocol value drain, reward extraction, or unfair reward access.
+Find whether the same vulnerability class can occur in in-scope code as Sherlock High/Medium Metric impacts: direct loss/theft/freezing of funds, severe oracle/pool/accounting failure, conditional realistic loss, or persistent core-function DoS with accepted impact.
 Use the external report as a hint, not as proof.
 Return only a strict JSON object that follows the contract below.
 
@@ -443,24 +440,24 @@ Return only a strict JSON object that follows the contract below.
 ## Scanner Intelligence Rules
 - First extract the external report's root primitive: authorization bypass, accounting drift, state-transition ordering, reward accumulator error, oracle/price manipulation, rounding/precision, replay/nonce, reentrancy/callback, token transfer semantics, or invariant mismatch.
 - Then search for the same primitive across both paid bug families:
-  1. fund extraction / protocol value drain;
-  2. reward extraction / unfair reward access.
+  1. direct loss/theft/freezing of funds or protocol value drain;
+  2. severe oracle/pool/accounting failure or conditional realistic loss accepted by Sherlock.
 - Consider adjacent scenarios, not only exact copies: same primitive in a different function, same accounting invariant in a different pool, same reward timing issue in a different accumulator, same transfer/order bug in a different asset path.
 - Do not stop after the first weak mapping. If the first mapping is rejected, try the next closest paid-impact mapping before returning REJECT.
 - Still reject anything that cannot produce concrete attacker-controlled fund/reward gain under supported protocol assumptions.
 
 ## Method
-1. Classify vuln type only if it can cause fund extraction or reward extraction.
+1. Classify vuln type only if it can cause valid Sherlock High/Medium Metric impact.
 2. Map to this current protocol with the external report to find a valid paid-scope candidate.
 3. Prove source-level root cause with exact file/function/symbol references.
 4. Bind the candidate to existing live on-chain state and protocol preconditions.
-5. Confirm concrete fund/reward extraction impact plus realistic likelihood.
+5. Confirm concrete valid Sherlock High/Medium Metric impact plus realistic likelihood.
 6. Define the exact local test needed to prove or disprove it.
 
 ## Disqualify Immediately
 - No reachable attacker-controlled entry path.
 - Trusted-role compromise required.
-- Theoretical-only issue with no fund/reward extraction impact.
+- Theoretical-only issue with no valid Sherlock High/Medium Metric impact.
 - DoS, freeze, liveness, griefing, or liquidation blockage without attacker value extraction.
 - Impact or likelihood missing.
 - Expected behavior, duplicate, unsupported assumption, or prior-report overlap.
@@ -503,7 +500,7 @@ Answer only that question.
 - If live context belongs to another protocol, return `verdict="REJECT"` and set `active_protocol.context_matches_blueprint=false`.
 - If a required live value is missing, do not invent it. Put the command needed in `live_preconditions[].command_if_missing`.
 - A non-REJECT verdict requires concrete attacker value gain in one of the paid categories only.
-- Reject mere High severity, DoS, freeze, liveness, griefing, liquidation blockage, accounting noise, or theoretical paths unless the same path transfers excess funds/rewards to the attacker.
+- Reject mere High severity, DoS, freeze, liveness, griefing, liquidation blockage, accounting noise, or theoretical paths unless the same path transfers excess funds or protocol value to the attacker.
 - Reject if the attack depends on admin/governance compromise, leaked keys, unsupported external dependency behavior, impossible oracle values, or user mistakes.
 - Reject if the source code path, attacker path, and live preconditions cannot all be stated precisely.
 - Prefer `NEEDS_LOCAL_PROOF` over `HIGH_CONFIDENCE_CANDIDATE` unless the source-level evidence is unusually strong.

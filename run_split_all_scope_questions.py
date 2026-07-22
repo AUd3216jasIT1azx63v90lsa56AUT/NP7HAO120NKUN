@@ -1,24 +1,30 @@
 import json
 import os
 import uuid
+import shutil
 
 from bot_runtime import smoke_limit
-from questions import scope_files, target_scopes
+from questions import BLUEPRINT, scope_files, target_scopes
 
 def generate_scope_files():
     """
     Split all_questions.json into chunks of 25 questions and save them as separate files.
     Each file will be named with a UUID and contain 25 questions.
     """
-    # Get the question directory, default to 'question'
+    # Get the scope directory and remove stale chunks from prior projects/runs.
     scope_directory = os.environ.get('SCOPE_DIR', 'scope')
-    os.makedirs(scope_directory, exist_ok=True)
-
-    # Create the question directory if it doesn't exist
+    if os.path.exists(scope_directory):
+        shutil.rmtree(scope_directory)
     os.makedirs(scope_directory, exist_ok=True)
 
     try:
-        # Load all questions
+        # Hard Metric-only contamination guard.
+        if BLUEPRINT.get("repo_name") != "metric" or BLUEPRINT.get("source_repo") != "incjanta/metric":
+            raise RuntimeError(f"Non-Metric blueprint loaded: {BLUEPRINT.get('source_repo')} / {BLUEPRINT.get('repo_name')}")
+        allowed_prefixes = ("metric-core/", "metric-periphery/", "smart-contracts-poc/")
+        bad_files = [f for f in scope_files if not f.startswith(allowed_prefixes)]
+        if bad_files:
+            raise RuntimeError(f"Non-Metric scope files detected: {bad_files[:10]}")
 
         chunk_size = 25
         limit = smoke_limit()

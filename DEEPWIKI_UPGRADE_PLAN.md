@@ -49,7 +49,7 @@ The chain controller is `workflow_chain.py`. Normal manual workflows still keep 
 
 ## Blueprint Strategy
 
-The old hard-coded `questions.py` memory is now externalized in `blueprints/sable_fund_reward.json`.
+The active Metric audit memory is externalized in `blueprints/metric_sherlock_scope_needs_review.json`; old non-Metric blueprints are forbidden in this runner.
 
 This keeps the benefit of a DeepWiki memory blueprint while making it safer:
 
