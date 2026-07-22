@@ -16,3 +16,6 @@ Status: prepared for GitHub deployment
 2. Set `PAT_TOKEN`.
 3. Verify workflows.
 4. Run `Setup Repo` workflow.
+
+Setup repo count: `15`
+Manual DeepWiki verification: `required before post-setup audit workflows`

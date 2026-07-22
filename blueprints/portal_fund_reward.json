@@ -1,5 +1,5 @@
 {
-  "max_repo": 10,
+  "max_repo": 15,
   "source_repo": "incjanta/metric",
   "repo_name": "metric",
   "project_name": "Metric",
@@ -130,5 +130,7 @@
     "Every candidate must carry duplicate-risk-needs-review until prior-art semantic cluster crosswalk is resolved.",
     "Every severity argument must carry severity-needs-review until Sherlock guide revision binding is resolved.",
     "Every PoC/build result must carry poc-env-needs-review if affected by unresolved dependency reproducibility."
-  ]
+  ],
+  "manual_deepwiki_verification_required": true,
+  "manual_deepwiki_verification_gate": "Open all generated DeepWiki links in Brave and wait for Null verification before continuing post-setup workflows."
 }
